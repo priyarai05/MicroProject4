@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Inter';
+}
+
+body {
+    background-color: #3B4664;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+#display h6 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+#exp {
+    width: 100%;
+    padding: 1em 0.5em;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: right;
+}
+
+.grid-container {
+    display: grid;
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 0.5rem;
+    /* max-width: 940px; */
+    gap: 10px;
+    padding: 1em;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+        "sv eg nne del"
+        "fr fv sx ad"
+        "one two thr su"
+        "dec zr div mul"
+        "ret ret res res";
+}
+
+.grid-container>div {
+    border-radius: 0.25rem;
+    background-color: #fff;
+    padding: 0.75em;
+    font-size: 1em;
+    font-weight: 800;
+    text-align: center;
+}
+
+.seven {
+    grid-area: sv;
+}
+
+.eight {
+    grid-area: eg;
+}
+
+.nine {
+    grid-area: nne;
+}
+
+.delete {
+    grid-area: del;
+}
+
+.four {
+    grid-area: fr;
+}
+
+.five {
+    grid-area: fv;
+}
+
+.six {
+    grid-area: sx;
+}
+
+.add {
+    grid-area: ad;
+}
+
+.one {
+    grid-area: one;
+}
+
+.two {
+    grid-area: two;
+}
+
+.three {
+    grid-area: thr;
+}
+
+.sub {
+    grid-area: su;
+}
+
+.decimal {
+    grid-area: dec;
+}
+
+.zero {
+    grid-area: zr;
+}
+
+.div {
+    grid-area: div;
+}
+
+.mul {
+    grid-area: mul;
+}
+
+.reset {
+    grid-area: ret;
+}
+
+.result {
+    grid-area: res;
+}
+
+.grid-container .result {
+    background-color: #D13F30;
+    color: #fff;
+}
+
+.grid-container .delete {
+    background-color: #3B4664;
+    color: #fff;
+}
+
+.grid-container .reset {
+    background-color: #3B4664;
+    color: #fff;
+}
