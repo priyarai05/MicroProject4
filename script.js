@@ -5,7 +5,6 @@ const numbers = document.querySelectorAll('.number')
 numbers.forEach(text => {
     text.addEventListener('click', function () {
         var expressionVal = expression.value;
-        console.log(text.innerHTML);
         if (text.innerHTML === 'RESET') {
             expression.value = "";
         }
@@ -18,8 +17,7 @@ numbers.forEach(text => {
                 if (expressionVal2.includes('x')) {
                     expressionVal2 = expressionVal2.replaceAll("x", '*')
                 }
-                console.log(expressionVal2)
-                expression.value = eval(expressionVal2)
+                expression.value = +eval(expressionVal2).toFixed(6)
             })
             myPromise.then().catch((e) => {
                 console.log("Invalid Input");
